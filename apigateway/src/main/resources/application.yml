@@ -1,0 +1,41 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+server:
+  port: 8763
+  error:
+    include-stacktrace: never
+spring:
+  application:
+    name: apiGateway
+  cloud:
+    gateway:
+      routes:
+        - id: userApi
+          uri: lb://userApi
+          predicates:
+            - Path=/user/** 
+#          filters:
+#            - AuthenticationFilter
+        - id: productApi
+          uri: lb://productApi
+          predicates:
+            - Path=/product/**  
+#          filters:
+#            - AuthenticationFilter
+        - id: shopApi
+          uri: lb://shopApi
+          predicates:
+            - Path=/pedido/** 
+#          filters:
+#            - AuthenticationFilter
+        - id: authApi
+          uri: lb://authApi
+          predicates:
+            - Path=/auth/** 
+        - id: discountApi
+          uri: lb://discountApi
+          predicates:
+            - Path=/discount/** 
+          

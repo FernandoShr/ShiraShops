@@ -1,0 +1,48 @@
+eureka:
+  client:
+    service-url:
+    # Conexão com Eureka
+      defaultZone: http://localhost:8761/eureka
+  instance:
+  # Instancia com porta aleatória
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+server:
+  port: ${PORT:0}
+  error:
+    include-stacktrace: never
+spring:
+  application:
+    name: productApi
+  datasource: 
+  # Conexão o com Banco de Dados
+    password: 123456
+    url: jdbc:mysql://localhost:3306/productdb
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    
+resilience4j: 
+  circuitbreaker: 
+    instances: 
+      Unavailable:
+          # Define se o CircuitBreaker deve ser registrado como um indicador de saúde 
+          registerHealthIndicator: true 
+          # Define o tamanho da janela deslizante do CircuitBreaker 
+          slidingWindowSize: 10 
+          # Define o tipo de janela deslizante que será usada para contar o número de chamadas 
+ 
+          slidingWindowType: COUNT_BASED 
+          # Define o número máximo de chamadas permitidas em estado meio aberto 
+          permittedNumberOfCallsInHalfOpenState: 4 
+          # Define o número mínimo de chamadas necessárias antes de considerar o estado do CircuitBreaker 
+          minimumNumberOfCalls: 10 
+          # Define a duração de espera em estado aberto antes de tentar reabrir 
+          waitDurationInOpenState: 5s 
+          # Define o limiar de taxa de chamadas lentas 
+          slowCallRateThreshold: 50 
+          # Define a duração da chamada lenta em segundos 
+          slowCallDurationThreshold: 5s 
+          # Define o limiar de taxa de falhas 
+          failureRateThreshold: 5

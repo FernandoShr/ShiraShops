@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../../AuthenticationAPI/Authentication-API/authentication/authentication/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../DiscountAPI/DiscountAPI/discountapi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../EurekaSever/Eureka-Server/eureka-server/eureka-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../GatewayAPI/API-Gateway/apigateway/apigateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../PedidoAPI/IBMShop-Pedido-API/pedidoapi/pedidoapi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../ProductAPI/IBMShop-Product-API/productapi/productapi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+  </component>
+</project>

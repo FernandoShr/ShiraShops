@@ -1,0 +1,13 @@
+package com.shirashop.userapi.repository;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.shirashop.userapi.entities.Endereco;
+
+@Repository
+public interface EnderecoRepository extends CrudRepository<Endereco, Integer>{
+	
+
+	
+}

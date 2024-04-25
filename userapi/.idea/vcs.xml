@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../EurekaSever/Eureka-Server" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../GatewayAPI/API-Gateway" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../PedidoAPI/IBMShop-Pedido-API" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../ProductAPI/IBMShop-Product-API" vcs="Git" />
+  </component>
+</project>

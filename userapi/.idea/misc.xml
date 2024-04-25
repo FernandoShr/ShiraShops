@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../../ProductAPI/IBMShop-Product-API/productapi/productapi/pom.xml" />
+        <option value="$PROJECT_DIR$/../../PedidoAPI/IBMShop-Pedido-API/pedidoapi/pedidoapi/pom.xml" />
+        <option value="$PROJECT_DIR$/../../GatewayAPI/API-Gateway/apigateway/apigateway/pom.xml" />
+        <option value="$PROJECT_DIR$/../../EurekaSever/Eureka-Server/eureka-server/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/../../DiscountAPI/DiscountAPI/discountapi/pom.xml" />
+        <option value="$PROJECT_DIR$/../../AuthenticationAPI/Authentication-API/authentication/authentication/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK" />
+</project>
