@@ -19,3 +19,5 @@ Inicialmente, a arquitetura dos projetos foi desenvolvida por **MVC** e na Disco
 Além disso, todas as APIs estão conectadas à GatewayApi, a qual está conectada no Servidor Eureka. Desse modo, é possível acessar todas as APIs através de uma única porta, a do Gateway, precisando alterar apenas o caminho da URL para obter a ação desejada.
 
 **Banco de Dados utilizado:** MySQL 
+
+Disponibilizei, também, o arquivo JSON cotendo todos os endpoints da aplicação, podendo ser importado e utilizado pelo Postman.
