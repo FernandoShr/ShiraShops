@@ -1,0 +1,1262 @@
+{
+	"info": {
+		"_postman_id": "520892b6-f2ce-4522-8b1c-3d2f6c6b6a51",
+		"name": "ShiraShop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25092440"
+	},
+	"item": [
+		{
+			"name": "Auth API",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8763/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8763",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {}
+						},
+						"url": {
+							"raw": "localhost:8763/auth/token",
+							"host": [
+								"localhost"
+							],
+							"port": "8763",
+							"path": [
+								"auth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Discount API",
+			"item": [
+				{
+					"name": "Cupom",
+					"item": [
+						{
+							"name": "Consulta - ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/discount/cupom/id/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"discount",
+										"cupom",
+										"id",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta - código",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/discount/cupom/codigo/10OFF",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"discount",
+										"cupom",
+										"codigo",
+										"10OFF"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta - Todos Status Ativo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/discount/cupom/all/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"discount",
+										"cupom",
+										"all",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Registra Cupom",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\r\n   {\r\n        \"codigo\": \"\",\r\n        \"percentual\": 0.2,\r\n        \"qtdMinimaProdutos\": 0,\r\n        \"valorMinimoPedido\": 100,\r\n        \"descontoMaximo\": -50.00,\r\n        \"dataExpiracao\": \"30/06/2024\"\r\n    }\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8763/discount/cupom/save",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"discount",
+										"cupom",
+										"save"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualiza Cupom",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/discount/cupom/update",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"discount",
+										"cupom",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reativa Cupom",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/discount/cupom/reactivate/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"discount",
+										"cupom",
+										"reactivate",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Desativa Cupom",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/discount/cupom/deactivate/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"discount",
+										"cupom",
+										"deactivate",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Desconto",
+					"item": [
+						{
+							"name": "Consulta - ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/discount/desconto/id/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"discount",
+										"desconto",
+										"id",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta - Por tipo de Desconto",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/discount/desconto/type/PROD",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"discount",
+										"desconto",
+										"type",
+										"PROD"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Registra Desconto",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\r\n    {\r\n        \"tipoDesconto\": \"CAT\",\r\n        \"idObjetoDoDesconto\": 2,\r\n        \"percentualDesconto\": 0.3,\r\n        \"dataExpiracao\": \"30/06/2024\"\r\n    }\r\n    // Criando um desconto de 30% para a Categoria de id = 1\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8763/discount/desconto/save",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"discount",
+										"desconto",
+										"save"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualiza Desconto",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/discount/desconto/update",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"discount",
+										"desconto",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reativa Desconto",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/discount/desconto/reactivate/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"discount",
+										"desconto",
+										"reactivate",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Desativa Desconto",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/discount/desconto/deactivate/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"discount",
+										"desconto",
+										"deactivate",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Order API",
+			"item": [
+				{
+					"name": "Consulta - Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8763/pedido",
+							"host": [
+								"localhost"
+							],
+							"port": "8763",
+							"path": [
+								"pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta - Todos pedidos por ID usuário",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8763/pedido/user/id/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8763",
+							"path": [
+								"pedido",
+								"user",
+								"id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta - ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8763/pedido/id/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8763",
+							"path": [
+								"pedido",
+								"id",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta - Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8763/pedido/status/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8763",
+							"path": [
+								"pedido",
+								"status",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registra Pedido",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idUsuario\": 1,\r\n    \"detalhePedido\": [\r\n        {\r\n            \"quantidade\": 2,\r\n            \"idProduto\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8763/pedido/insert",
+							"host": [
+								"localhost"
+							],
+							"port": "8763",
+							"path": [
+								"pedido",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza status - EFETUADO",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8763/pedido/efetuado",
+							"host": [
+								"localhost"
+							],
+							"port": "8763",
+							"path": [
+								"pedido",
+								"efetuado"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza status - PROCESSADO",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8763/pedido/processado",
+							"host": [
+								"localhost"
+							],
+							"port": "8763",
+							"path": [
+								"pedido",
+								"processado"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza status - CONCLUIDO",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8763/pedido/concluido",
+							"host": [
+								"localhost"
+							],
+							"port": "8763",
+							"path": [
+								"pedido",
+								"concluido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza status - CANCELADO",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idPedido\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8763/pedido/cancelado",
+							"host": [
+								"localhost"
+							],
+							"port": "8763",
+							"path": [
+								"pedido",
+								"cancelado"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product API",
+			"item": [
+				{
+					"name": "Subcategoria",
+					"item": [
+						{
+							"name": "Consulta - Todos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/product/subcategoria/all",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"product",
+										"subcategoria",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta - ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/product/subcategoria/id/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"product",
+										"subcategoria",
+										"id",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta - ID e Produtos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/product/subcategoria/idSubProd/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"product",
+										"subcategoria",
+										"idSubProd",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Registra Subcategoria",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome_sub_categoria\": \"Futebol\",\r\n    \"descricao\": \"Subcategoria de Esportes\",\r\n    \"categoria\": {\r\n        \"idCategoria\":1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8763/product/subcategoria/register",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"product",
+										"subcategoria",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualiza Subcategoria",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/product/subcategoria/update",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"product",
+										"subcategoria",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deleta Subcategoria",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/product/subcategoria/delete",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"product",
+										"subcategoria",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Categoria",
+					"item": [
+						{
+							"name": "Consulta - Todos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/product/categoria/all",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"product",
+										"categoria",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta - ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/product/categoria/id/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"product",
+										"categoria",
+										"id",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta - ID e Produtos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/product/categoria/idCatProd/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"product",
+										"categoria",
+										"idCatProd",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Registra Categoria",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome_categoria\": \"Esportes\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8763/product/categoria/register",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"product",
+										"categoria",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualiza Categoria",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/product/categoria/update",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"product",
+										"categoria",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deleta Categoria",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/product/categoria/delete",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"product",
+										"categoria",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Produto",
+					"item": [
+						{
+							"name": "Consulta - Todos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/product/all",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"product",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta - ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/product/id/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"product",
+										"id",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta - Nome",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/product/nome/Notebook",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"product",
+										"nome",
+										"Notebook"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Registra Produto",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nomeProduto\": \"Bola de Futebol\",\r\n    \"descricao\": \"Bola de futebol em couro tamanho oficial!\",\r\n    \"sku\":1010,\r\n    \"valorUnitario\": 27.40,\r\n    \"estoque\": 20,\r\n    \"subcategoria\": {\r\n        \"idSubCategoria\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8763/product/register",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"product",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualiza Produto",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/product/update",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"product",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deleta Produto",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/product/delete",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"product",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User API",
+			"item": [
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Consulta - Todos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/user/all",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"user",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta - ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/user/id/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"user",
+										"id",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta - Nome",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/user/nome/Fernando",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"user",
+										"nome",
+										"Fernando"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta - CPF",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/user/cpf/200.105.760-10",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"user",
+										"cpf",
+										"200.105.760-10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Registra Usuário",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\":\"Fernando\",\r\n    \"sobrenome\": \"Shiraishi\",\r\n    \"cpf\": \"660.008.760-92\",\r\n    \"telefone\": \"+55 (11) 9999-9999\",\r\n    \"endereco\": [{\r\n        \"apelido\": \"Casa\",\r\n        \"rua\": \"Rua\",\r\n        \"numero\": \"40\",\r\n        \"cep\": \"32215-440\",\r\n        \"complemento\": \"Próximo ao metro\",\r\n        \"bairro\": \"Bairro\",\r\n        \"cidade\": \"Cidade\",\r\n        \"estado\": \"Estado\",\r\n        \"pais\": {\r\n            \"nome\": \"Brasil\",\r\n            \"codigo\": \"+55\"\r\n        }\r\n    }]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8763/user/register",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"user",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualiza Usuário",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idUsuario\": 1,\r\n    \"nome\": \"Fernando\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8763/user/update",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"user",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reativa Usuário",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/user/reativar",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"user",
+										"reativar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deleta Usuário",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/user/delete",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"user",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Endereço",
+					"item": [
+						{
+							"name": "Consulta - ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/user/endereco/id/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"user",
+										"endereco",
+										"id",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consulta - Por ID usuário",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/user/endereco/userId/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"user",
+										"endereco",
+										"userId",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Registra Endereço",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/user/endereco/register",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"user",
+										"endereco",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualiza Endereço",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/user/endereco/update",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"user",
+										"endereco",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deleta Endereço",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8763/user/endereco/delete",
+									"host": [
+										"localhost"
+									],
+									"port": "8763",
+									"path": [
+										"user",
+										"endereco",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
